@@ -13,7 +13,7 @@ func TestObject(t *testing.T) {
     "age": "35",
     "man": "true",
     "profile": {
-       "company": "hfjy"
+       "company": "test"
     },
     "followers": [
       {"name": "张三", "age": 10},
@@ -67,7 +67,7 @@ func TestObject(t *testing.T) {
 
 	expect(object.Has("profile")).To.Equal(true)
 	expect(object.HasObject("profile")).To.Equal(true)
-	expect(object.GetObject("profile").GetString("company")).To.Equal("hfjy")
+	expect(object.GetObject("profile").GetString("company")).To.Equal("test")
 	expect(object.Has("nofound")).To.Equal(false)
 	expect(object.HasObject("nofound")).To.Equal(false)
 
